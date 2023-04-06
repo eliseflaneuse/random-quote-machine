@@ -1,0 +1,152 @@
+/* 
+1. Global Styles
+
+Media Queries
+
+ ===============================================*/
+
+ /* Reset css */
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+ /* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+ * {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+   /* font-size: 62.5%;  see if this works best for me */
+    margin: 0;
+    padding: 0;
+}
+
+ *, *:before, *:after {box-sizing: inherit}
+
+/* End of reset css */
+
+/* 1. Global Styles
+ ===============================================*/
+
+#quote-box {
+  width: 450px;
+  height: 450px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 15px;
+  border: 1px solid white;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+#text-container {
+  width: 250px;
+  height: 250px;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-weight: lighter;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+	box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+	animation: morphing 10s infinite;
+  
+  
+}
+
+#text {
+  padding: 0 30px;
+}
+#out {
+  width: 100%;
+  font-size: 15px;
+}
+
+#author {
+  width: 100%;
+  margin: 10px auto;
+  padding-left: 130px;
+  
+}
+
+#click {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 0;
+}
+
+#new-quote {
+  float: right;
+  box-shadow:inset 0px 1px 0px 0px #fff;
+	background:linear-gradient(to bottom, #fff 5%, #f6f6f6 100%);
+	background-color:#fff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	font-size:15px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #fff;
+ 
+}
+
+#new-quote:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+#new-quote:active {
+	position:relative;
+	top:1px;
+}
+
+#tweet-quote {
+  text-decoration: none;
+  color:#191970;
+  
+}
+
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color:#f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #191970;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+@keyframes morphing {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+  }
+  25% { 
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    box-shadow: -10px -5px 50px rgba(0,0,0,0.2);
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;	
+  }
+}
